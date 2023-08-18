@@ -1,0 +1,7 @@
+assets
+samples
+runs/*
+datasets/*
+!runs/.gitkeep
+!datasets/.gitkeep
+*.wav

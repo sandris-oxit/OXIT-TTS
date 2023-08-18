@@ -614,3 +614,28 @@ def bel_tts_formatter(root_path, meta_file, **kwargs):  # pylint: disable=unused
             text = cols[1]
             items.append({"text": text, "audio_file": wav_file, "speaker_name": speaker_name, "root_path": root_path})
     return items
+
+
+def hungarian_tts(root_path, meta_file, **kwargs):  # pylint: disable=unused-argument
+    """Normalizes the hungarian-single-speaker-tts meta data file to TTS format
+    https://www.kaggle.com/datasets/bryanpark/hungarian-single-speaker-speech-dataset"""
+    txt_file = os.path.join(root_path, meta_file)
+    items = []
+    speaker_name = "hutts"
+    max_length = 180  # longer samples skew the distribution
+    bads = set([
+        'egri_csillagok/egri_csillagok_3990.wav',  # too short text
+        'egri_csillagok/egri_csillagok_3951.wav',  # too short text
+        'egri_csillagok/egri_csillagok_3932.wav',  # too short text
+    ])
+    with open(txt_file, "r", encoding="utf-8") as ttf:
+        for line in ttf:
+            cols = line.split("|")
+            fname, text = cols[0], cols[2]
+            if fname in bads:
+                continue
+            wav_file = os.path.join(root_path, fname)
+            if len(text) == 0 or len(text) > max_length:
+                continue
+            items.append({"text": text, "audio_file": wav_file, "speaker_name": speaker_name, "root_path": root_path})
+    return items
