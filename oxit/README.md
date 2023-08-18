@@ -36,3 +36,15 @@ python oxit\train_hifigan.py
 ```bash
 tts --model_path run\best_model.pth --config_path run\config.json --vocoder_path run\best_model.pth --vocoder_config_path run\config.json --text "Ez egy próba mondat."
 ```
+
+## Progress
+
+#### Glow-TTS + HiFiGAN:
+
+[Sample 1](samples/glowtts-hifigan1.wav)  
+[Sample 2](samples/glowtts-hifigan2.wav)  
+[Sample 3](samples/glowtts-hifigan3.wav)  
+
+#### VITS:
+
+...
