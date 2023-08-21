@@ -5,11 +5,12 @@ Hungarian text-to-speech using [coqui-ai/TTS](https://github.com/coqui-ai/TTS).
 ## Installation
 
 1. Download [Hungarian Single Speaker Speech Dataset](https://www.kaggle.com/datasets/bryanpark/hungarian-single-speaker-speech-dataset)
-2. Install prerequisites: `eSpeak` or `eSpeak NG`
+2. Install prerequisites: `eSpeak` or `eSpeak NG`, and add to `PATH`
 3. Clone repository
-4. Create virtual environment
-5. Install PyTorch + CUDA
-6. Install TTS: `python -m pip install -e .`
+4. Change branch to `hun`
+5. Create virtual environment
+6. Install `PyTorch` + `CUDA`
+7. Install TTS: `python -m pip install -e .`
 
 Test installation success: `python oxit/test_models.py`
 
