@@ -48,4 +48,10 @@ tts --model_path run\best_model.pth --config_path run\config.json --vocoder_path
 
 #### VITS:
 
+[Sample 1](samples/vits1.wav)  
+[Sample 2](samples/vits2.wav)  
+[Sample 3](samples/vits3.wav)  
+
+#### Tacotron2 + HiFiGAN/MelGAN:
+
 ...
