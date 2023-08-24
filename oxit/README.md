@@ -2,6 +2,8 @@
 
 Hungarian text-to-speech using [coqui-ai/TTS](https://github.com/coqui-ai/TTS).
 
+<img src="tts_pipeline.png" width="900">
+
 ## Installation
 
 1. Download [Hungarian Single Speaker Speech Dataset](https://www.kaggle.com/datasets/bryanpark/hungarian-single-speaker-speech-dataset)
