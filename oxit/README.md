@@ -27,7 +27,7 @@ python oxit\train_glowtts.py
 
 2. Create spectrogram dataset
 ```bash
-python TTS\bin\extract_tts_spectrograms.py --config_path run\config.json --checkpoint_path run\best_model.pth --output_path datasets\mel
+python TTS\bin\extract_tts_spectrograms.py --config_path run\config.json --checkpoint_path run\best_model.pth --output_path oxit\datasets\mel
 ```
 
 3. Train vocoder model

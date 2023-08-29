@@ -25,7 +25,7 @@ def main():
         seq_len=8192,
         pad_short=2000,
         use_noise_augment=True,
-        eval_split_size=10,
+        eval_split_size=100,
         print_step=25,
         print_eval=False,
         mixed_precision=True,
